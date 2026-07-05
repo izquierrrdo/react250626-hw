@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 export function MenuItem({ menuItem }) {
-  const [qty, setQty] = useState(0);
   const MAX_PRODUCT_QTY = 5;
+  const [qty, setQty] = useState(0);
 
   function increment() {
     if (qty < MAX_PRODUCT_QTY) {
