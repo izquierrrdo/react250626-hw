@@ -1,3 +1,10 @@
-export function Tab({ tabValue, tabClickHandler }) {
-  return <button onClick={tabClickHandler}>{tabValue}</button>;
+export function Tab({ tabValue, isActive, tabClickHandler }) {
+  return (
+    <button
+      style={{ border: isActive ? "2px solid red" : "2px solid blue" }}
+      onClick={tabClickHandler}
+    >
+      {tabValue}
+    </button>
+  );
 }

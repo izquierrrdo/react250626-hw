@@ -14,6 +14,7 @@ export function RestaurantsList() {
     <>
       <TabsSelector
         tabs={restaurantsTabs}
+        activeTab={restaurantId}
         onTabChange={(tabKey) => setRestaurantId(tabKey)}
       />
       <Restaurant

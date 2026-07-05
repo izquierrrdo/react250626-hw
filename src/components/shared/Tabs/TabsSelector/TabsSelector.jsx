@@ -1,6 +1,6 @@
 import { Tab } from "../Tab/Tab.jsx";
 
-export function TabsSelector({ tabs, onTabChange }) {
+export function TabsSelector({ tabs, activeTab, onTabChange }) {
   function handleTabChange(tabKey) {
     onTabChange(tabKey);
   }
@@ -11,6 +11,7 @@ export function TabsSelector({ tabs, onTabChange }) {
         <Tab
           key={tabKey}
           tabValue={tabValue}
+          isActive={activeTab === tabKey}
           tabClickHandler={() => handleTabChange(tabKey)}
         />
       ))}
