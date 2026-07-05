@@ -6,10 +6,6 @@ import { TabsSelector } from "../shared/Tabs/TabsSelector/TabsSelector.jsx";
 export function RestaurantsList() {
   const [restaurantId, setRestaurantId] = useState(restaurantsData[0].id);
 
-  function handleRestaurantChange(id) {
-    setRestaurantId(id);
-  }
-
   const restaurantsTabs = restaurantsData.map(({ id, name }) => {
     return { tabKey: id, tabValue: name };
   });
@@ -18,7 +14,7 @@ export function RestaurantsList() {
     <>
       <TabsSelector
         tabs={restaurantsTabs}
-        onTabChange={(tabKey) => handleRestaurantChange(tabKey)}
+        onTabChange={(tabKey) => setRestaurantId(tabKey)}
       />
       <Restaurant
         restaurant={restaurantsData.find(({ id }) => {
