@@ -1,13 +1,7 @@
-import RestaurantsList from "./components/RestaurantsList/RestaurantsList.jsx";
-import Title from "./components/shared/Title.jsx";
+import { AppLayout } from "./components/Layouts/AppLayout/AppLayout.jsx";
 
 function App() {
-  return (
-    <>
-      <Title>Restaurants app</Title>
-      <RestaurantsList />
-    </>
-  );
+  return <AppLayout />;
 }
 
 export default App;
