@@ -1,4 +1,4 @@
-import Title from "../../shared/Title/Title.jsx";
+import { Title } from "../../shared/Title/Title.jsx";
 
 export function Header() {
   return (

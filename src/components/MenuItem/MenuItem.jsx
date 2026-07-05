@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function MenuItem({ menuItem }) {
+export function MenuItem({ menuItem }) {
   const [qty, setQty] = useState(0);
 
   function increment() {

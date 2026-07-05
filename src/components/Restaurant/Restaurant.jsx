@@ -1,7 +1,7 @@
-import Title from "../shared/Title/Title.jsx";
-import Menu from "../Menu/Menu.jsx";
+import { Title } from "../shared/Title/Title.jsx";
+import { Menu } from "../Menu/Menu.jsx";
 
-export default function Restaurant({ restaurant }) {
+export function Restaurant({ restaurant }) {
   return (
     <>
       <Title level={3}>{restaurant.name}</Title>
