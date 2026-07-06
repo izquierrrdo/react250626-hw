@@ -1,6 +1,6 @@
-import MenuItem from "../MenuItem/MenuItem.jsx";
+import { MenuItem } from "../MenuItem/MenuItem.jsx";
 
-export default function Menu({ menu }) {
+export function Menu({ menu }) {
   return (
     <ul>
       {menu.map((menuItem) => (
