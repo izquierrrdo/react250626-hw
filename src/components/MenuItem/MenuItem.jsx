@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { MAX_PRODUCT_QTY } from "../../constants.js";
 
 export function MenuItem({ menuItem }) {
-  const MAX_PRODUCT_QTY = 5;
   const [qty, setQty] = useState(0);
 
   function increment() {

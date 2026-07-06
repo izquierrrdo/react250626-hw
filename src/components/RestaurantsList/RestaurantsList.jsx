@@ -3,6 +3,9 @@ import { useState } from "react";
 import { restaurants as restaurantsData } from "../../../materials/mock.js";
 import { TabsSelector } from "../shared/Tabs/TabsSelector/TabsSelector.jsx";
 
+const getActiveRestaurant = (restaurants, activeId) =>
+  restaurants.find(({ id }) => id === activeId);
+
 export function RestaurantsList() {
   const [restaurantId, setRestaurantId] = useState(restaurantsData[0].id);
 
@@ -18,9 +21,7 @@ export function RestaurantsList() {
         onTabChange={(tabKey) => setRestaurantId(tabKey)}
       />
       <Restaurant
-        restaurant={restaurantsData.find(({ id }) => {
-          return id === restaurantId;
-        })}
+        restaurant={getActiveRestaurant(restaurantsData, restaurantId)}
       />
     </>
   );
